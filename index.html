@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NB I. - Magyar Labdarúgó Archívum</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">NB<span>1</span> Info</div>
+            <ul class="nav-links">
+                <li><a href="#home">Főoldal</a></li>
+                <li><a href="#teams">Csapatok</a></li>
+                <li><a href="#table">Tabella</a></li>
+                <li><a href="#contact">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>OTP Bank Liga</h1>
+            <p>A magyar labdarúgás élvonala - Statisztikák, csapatok és eredmények egy helyen.</p>
+            <a href="#teams" class="btn">Fedezd fel a csapatokat</a>
+        </div>
+    </section>
+
+    <main id="react-app">
+
+        <section id="crud-section" class="container">
+    <h2 class="section-title">Klubok Kezelése</h2>
+    
+    <div style="margin-bottom: 20px; text-align: center;">
+        <input type="text" id="new-klub-name" placeholder="Új csapat neve">
+        <button class="btn" onclick="createKlub()">Hozzáadás</button>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Csapatnév</th>
+                    <th>Műveletek</th>
+                </tr>
+            </thead>
+            <tbody id="crud-table-body">
+                </tbody>
+        </table>
+    </div>
+</section>
+
+
+        <section id="teams" class="container">
+            <h2 class="section-title">Aktuális NB I-es Csapatok</h2>
+            <p class="subtitle">A 2023/2024-es szezon résztvevői:</p>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <h3>Ferencvárosi TC</h3>
+                    <p>Székhely: Budapest</p>
+                    <ul>
+                        <li>Alapítva: 1899</li>
+                        <li>Stadion: Groupama Aréna</li>
+                    </ul>
+                </div>
+                <div class="team-card">
+                    <h3>Paksi FC</h3>
+                    <p>Székhely: Paks</p>
+                    <ul>
+                        <li>Alapítva: 1952</li>
+                        <li>Stadion: Fehérvári úti stadion</li>
+                    </ul>
+                </div>
+                <div class="team-card">
+                    <h3>Puskás Akadémia</h3>
+                    <p>Székhely: Felcsút</p>
+                    <ul>
+                        <li>Alapítva: 2005</li>
+                        <li>Stadion: Pancho Aréna</li>
+                    </ul>
+                </div>
+                <div class="team-card">
+                    <h3>Debreceni VSC</h3>
+                    <p>Székhely: Debrecen</p>
+                    <ul>
+                        <li>Alapítva: 1902</li>
+                        <li>Stadion: Nagyerdei Stadion</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="table" class="container">
+            <h2 class="section-title">Bajnoki Tabella (Minta)</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Helyezés</th>
+                            <th>Csapat</th>
+                            <th>Mérkőzés</th>
+                            <th>Pontszám</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="top-rank">
+                            <td>1.</td>
+                            <td>Ferencvárosi TC</td>
+                            <td>22</td>
+                            <td>52</td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>Paksi FC</td>
+                            <td>22</td>
+                            <td>45</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>Puskás Akadémia</td>
+                            <td>22</td>
+                            <td>39</td>
+                        </tr>
+                        <tr class="relegation">
+                            <td>11.</td>
+                            <td>Mezőkövesd</td>
+                            <td>22</td>
+                            <td>15</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Készítette: Szabó Máté FZ9T0N | Kincses Ármin UY7NZC</p>
+    </footer>
+        <script src="app.js"></script>
+</body>
+</html>
